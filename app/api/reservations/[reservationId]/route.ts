@@ -16,7 +16,7 @@ export async function DELETE(
   if (!currentUser) {
     return NextResponse.error();
   }
-
+  
   const { reservationId } = params;
 
   if (!reservationId || typeof reservationId !== 'string') {

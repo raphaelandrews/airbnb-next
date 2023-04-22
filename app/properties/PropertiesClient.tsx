@@ -25,7 +25,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
 
   const onDelete = useCallback((id: string) => {
     setDeletingId(id);
-
+    
     axios.delete(`/api/listings/${id}`)
     .then(() => {
       toast.success('Listing deleted');
